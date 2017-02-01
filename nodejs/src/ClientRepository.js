@@ -1,3 +1,5 @@
+"use strict";
+
 class ClientRepository {
 
     birthdayIsTodayFor(personName) {
