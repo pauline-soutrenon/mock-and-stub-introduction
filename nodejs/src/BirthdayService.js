@@ -2,8 +2,9 @@
 
 class BirthdayService {
 
-    constructor(clientRepository){
+    constructor(clientRepository, mailer){
         this.repository = clientRepository
+        this.mailer = mailer
     }
 
     greeting(name) {
@@ -16,7 +17,7 @@ class BirthdayService {
             greeting = "Good morning " + name + "."
         }
 
-        return greeting
+        this.mailer.send(greeting)
 
     }
 }
