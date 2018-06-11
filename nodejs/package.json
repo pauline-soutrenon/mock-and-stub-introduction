@@ -20,7 +20,7 @@
     "mocha": "^2.3.4",
     "mochawrapper": "",
     "phantomjs": "^1.9.19",
-    "sinon": "^1.17.7"
+    "sinon": "^6.0.0"
   },
   "keywords": [
     "kata",
