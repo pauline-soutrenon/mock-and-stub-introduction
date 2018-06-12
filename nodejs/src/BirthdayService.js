@@ -11,7 +11,7 @@ class BirthdayService {
         let greeting
 
         return this.repository.birthdayIsTodayFor(name).then(isBirthday => {
-            if (this.repository.birthdayIsTodayFor(name)) {
+            if (isBirthday) {
                 greeting = "Happy birthday " + name + "!"
             } else {
                 greeting = "Good morning " + name + "."

@@ -15,11 +15,8 @@
   "devDependencies": {
     "chai": "^3.4.1",
     "istanbul": "^0.4.1",
-    "karma": "^0.13.19",
-    "karma-phantomjs-launcher": "^0.2.3",
     "mocha": "^2.3.4",
     "mochawrapper": "",
-    "phantomjs": "^1.9.19",
     "sinon": "^1.17.7"
   },
   "keywords": [
