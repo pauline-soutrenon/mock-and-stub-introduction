@@ -18,8 +18,6 @@ class BirthdayService {
             }
             return greeting
         })
-
-
     }
 }
 module.exports = BirthdayService
