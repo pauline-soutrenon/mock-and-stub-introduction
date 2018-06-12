@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --ui exports --reporter spec",
-    "coverage": "mochacoverage",
+    "coverage": "nyc --reporter=text --reporter=html mocha --recursive 'test/**/*.spec.js'",
     "monitor": "mocha --reporter min --watch",
     "debugtest": "mocha --debug-brk --ui exports --reporter spec"
   },
@@ -19,6 +19,7 @@
     "karma-phantomjs-launcher": "^0.2.3",
     "mocha": "^2.3.4",
     "mochawrapper": "",
+    "nyc": "^12.0.2",
     "phantomjs": "^1.9.19",
     "sinon": "^6.0.0"
   },
@@ -27,5 +28,18 @@
     "tdd"
   ],
   "contributors": [],
-  "repository": "git@github.com:martinsson/kata-setup.git"
+  "repository": "git@github.com:martinsson/kata-setup.git",
+  "nyc": {
+    "include": [
+      "src/*.js"
+    ],
+    "exclude": [
+      "lib"
+    ],
+    "extension": [
+      ".js"
+    ],
+    "reporter": [],
+    "all": true
+  }
 }
