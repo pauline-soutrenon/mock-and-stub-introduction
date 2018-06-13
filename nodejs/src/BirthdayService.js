@@ -2,7 +2,7 @@
 
 class BirthdayService {
 
-    constructor(clientRepository, mailer){
+    constructor(clientRepository, mailer) {
         this.repository = clientRepository
         this.mailer = mailer
     }
@@ -10,20 +10,20 @@ class BirthdayService {
     greeting(name) {
 
 
-        return this.repository.birthdayIsTodayFor(name)
-            .then(isBirthday => {
-                let greeting
+        return this.repository.birthdayIsTodayFor(name).then(isBirthday => {
+            let greeting
 
-                if (isBirthday) {
-                    greeting = "Happy birthday " + name + "!"
-                } else {
-                    greeting = "Good morning " + name + "."
-                }
+            if (isBirthday) {
+                greeting = "Happy birthday " + name + "!"
+            } else {
+                greeting = "Good morning " + name + "."
+            }
 
-                this.mailer.send(greeting)
+            this.mailer.send(greeting)
 
-            });
+        });
 
     }
 }
+
 module.exports = BirthdayService
