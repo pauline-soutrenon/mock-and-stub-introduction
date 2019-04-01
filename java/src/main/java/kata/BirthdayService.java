@@ -1,17 +1,20 @@
 package kata;
 
+import notification.Mailer;
 import clients.ClientRepository;
 
 public class BirthdayService {
   
   private ClientRepository repository;
+  private Mailer mailer;
 
-  public BirthdayService(ClientRepository repository) {
+  public BirthdayService(ClientRepository repository, Mailer mailer) {
     this.repository = repository;
+    this.mailer = mailer;
     
   }
   
-  public String greeting(String name) {
+  public void greeting(String name) {
     
     String greeting;
     
@@ -21,7 +24,7 @@ public class BirthdayService {
       greeting = "Good morning " + name + ".";
     }
     
-    return greeting;
+    mailer.send(greeting);
     
   }
 

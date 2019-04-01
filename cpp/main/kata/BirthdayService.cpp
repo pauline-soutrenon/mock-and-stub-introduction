@@ -1,11 +1,12 @@
 #include "clients/ClientRepository.h"
 #include "kata/BirthdayService.h"
 
-BirthdayService::BirthdayService(ClientRepository& withRepository) {
+BirthdayService::BirthdayService(ClientRepository& withRepository, Mailer& withMailer) {
     repository = &withRepository;
+    mailer = &withMailer;
 }
   
-std::string BirthdayService::greeting(std::string name) const{
+void BirthdayService::greeting(std::string name) const{
 
     std::string greeting;
 
@@ -14,5 +15,5 @@ std::string BirthdayService::greeting(std::string name) const{
     } else {
         greeting = "Good morning " + name + ".";
     }
-    return greeting;
+    mailer->send(greeting);
 }

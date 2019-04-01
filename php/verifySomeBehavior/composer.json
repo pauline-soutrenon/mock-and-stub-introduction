@@ -1,0 +1,20 @@
+{
+    "name": "martinsson/mock-and-stub-intro",
+    "description": "Train mocks and stubs on existing code",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Johan MARTINSSON",
+            "email": "martinsson.johan@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"": "src/"}
+    },
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^7.0",
+        "phpspec/prophecy": "~1.0"
+    }
+}
