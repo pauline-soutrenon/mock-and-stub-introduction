@@ -1,0 +1,41 @@
+{
+  "name": "kata",
+  "version": "1.0.0",
+  "description": "basic nodejs setup for unit testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --ui exports --reporter spec",
+    "coverage": "nyc --reporter=text --reporter=html mocha --recursive 'test/**/*.spec.js'",
+    "monitor": "mocha --reporter min --watch",
+    "debugtest": "mocha --debug-brk --ui exports --reporter spec"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "istanbul": "^0.4.1",
+    "mocha": "^2.3.4",
+    "nyc": "^12.0.2",
+    "sinon": "^6.0.0"
+  },
+  "keywords": [
+    "kata",
+    "tdd"
+  ],
+  "contributors": [],
+  "repository": "git@github.com:martinsson/kata-setup.git",
+  "nyc": {
+    "include": [
+      "src/*.js"
+    ],
+    "exclude": [
+      "lib"
+    ],
+    "extension": [
+      ".js"
+    ],
+    "reporter": [],
+    "all": true
+  }
+}
