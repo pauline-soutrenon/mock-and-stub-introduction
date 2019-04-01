@@ -15,3 +15,12 @@ Command line or from IDE
 
 Now you can run the tests. Run -> Test Project
 
+### Code coverage
+Check that you've covered everything with 
+
+    php bin/phpunit --coverage-html report/
+
+Then open report/index.html in a browser. For instance
+
+    open report/index.html       # MacOS
+    firefox report/index.html    # windows/linux
