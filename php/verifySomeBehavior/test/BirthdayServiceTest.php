@@ -1,5 +1,6 @@
 <?php
 
+namespace verifySomeBehavior;
 
 use PHPUnit\Framework\TestCase;
 

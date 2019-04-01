@@ -1,5 +1,7 @@
 <?php
 
+namespace stubSomeValues;
+
 class BirthdayService {
     
     var $clientRepository;

@@ -1,5 +1,7 @@
 <?php
 
+namespace verifySomeBehavior;
+
 class BirthdayService {
     
     private $clientRepository;
