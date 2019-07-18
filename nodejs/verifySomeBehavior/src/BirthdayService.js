@@ -1,4 +1,4 @@
-"use strict";
+"use strict"
 
 class BirthdayService {
 
@@ -8,21 +8,16 @@ class BirthdayService {
     }
 
     greeting(name) {
+        let isBirthday = this.repository.birthdayIsTodayFor(name)
 
+        let greeting
+        if (isBirthday) {
+            greeting = "Happy birthday " + name + "!"
+        } else {
+            greeting = "Good morning " + name + "."
+        }
 
-        return this.repository.birthdayIsTodayFor(name).then(isBirthday => {
-            let greeting
-
-            if (isBirthday) {
-                greeting = "Happy birthday " + name + "!"
-            } else {
-                greeting = "Good morning " + name + "."
-            }
-
-            this.mailer.send(greeting)
-
-        });
-
+        this.mailer.send(greeting)
     }
 }
 

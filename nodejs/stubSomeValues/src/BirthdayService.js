@@ -1,8 +1,8 @@
-"use strict";
+"use strict"
 
 class BirthdayService {
 
-    constructor(clientRepository){
+    constructor(clientRepository) {
         this.repository = clientRepository
     }
 
@@ -10,14 +10,15 @@ class BirthdayService {
 
         let greeting
 
-        return this.repository.birthdayIsTodayFor(name).then(isBirthday => {
-            if (isBirthday) {
-                greeting = "Happy birthday " + name + "!"
-            } else {
-                greeting = "Good morning " + name + "."
-            }
-            return greeting
-        })
+        const isBirthday = this.repository.birthdayIsTodayFor(name)
+        if (isBirthday) {
+            greeting = "Happy birthday " + name + "!"
+        } else {
+            greeting = "Good morning " + name + "."
+        }
+        return greeting
+
     }
 }
+
 module.exports = BirthdayService
